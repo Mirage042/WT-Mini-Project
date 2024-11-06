@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Login from "./components/Login";
+import Mode from "./components/Mode";
+import AimPracticePage from "./components/Aim"; // Make sure this is the correct component
+import ReactionTimePage from "./components/Reaction"; // Adjust accordingly
+import ClickingSpeedPage from "./components/Clicker"; // Adjust accordingly
+// Add other necessary imports similarly
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={<Login onLogin={() => setIsLoggedIn(true)} />}
+        />
+        <Route
+          path="/menu"
+          element={isLoggedIn ? <Mode /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/aim-practice"
+          element={isLoggedIn ? <AimPracticePage /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/reaction-time"
+          element={isLoggedIn ? <ReactionTimePage /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/clicking-speed"
+          element={isLoggedIn ? <ClickingSpeedPage /> : <Navigate to="/" />}
+        />
+        {/* <Route
+          path="/graph"
+          element={isLoggedIn ? <GraphPage /> : <Navigate to="/" />}
+        /> */}
+      </Routes>
+    </Router>
   );
 }
 

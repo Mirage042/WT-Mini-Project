@@ -1,0 +1,116 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e; /* Dark background similar to the image */
+  font-family: Arial, sans-serif;
+}
+
+/* Centered login box */
+.login-container {
+  background-color: #333;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+/* Header styling */
+.login-container h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Label styling */
+.login-container label {
+  display: block;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Input styling */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #555;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Button styling */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #444;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #555;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+#loginForm label {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+#loginForm button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#loginForm button:hover {
+  background-color: #0056b3;
+}
